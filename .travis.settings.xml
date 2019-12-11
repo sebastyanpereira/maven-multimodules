@@ -7,7 +7,7 @@
         <server>
             <id>github</id>
             <username>sebastyanpereira</username>
-            <password>${GIT_TOKEN}</password>
+            <password>${GIT_TOKE}</password>
         </server>
     </servers>
     <mirrors />
