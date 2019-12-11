@@ -1,0 +1,1 @@
+# WEB MULTIMODULE APP[![Build Status](https://travis-ci.org/sebastyanpereira/maven-multimodules.svg?branch=master)](https://travis-ci.org/sebastyanpereira/maven-multimodules)
