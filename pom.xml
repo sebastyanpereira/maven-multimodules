@@ -72,20 +72,6 @@
         </dependencies>
     </dependencyManagement>
 
-<!--    <distributionManagement>-->
-<!--        <repository>-->
-<!--            <id>github</id>-->
-<!--            <url>https://maven.pkg.github.com/sebastyanpereira/jdbc-template</url>-->
-<!--        </repository>-->
-<!--    </distributionManagement>-->
-
-<!--    <repositories>-->
-<!--        <repository>-->
-<!--            <id>github</id>-->
-<!--            <url>https://maven.pkg.github.com/sebastyanpereira/jdbc-template</url>-->
-<!--        </repository>-->
-<!--    </repositories>-->
-
     <modules>
         <module>app</module>
         <module>lib</module>
