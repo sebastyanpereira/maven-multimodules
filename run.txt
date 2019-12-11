@@ -1,3 +1,8 @@
 WINDOWS: java -cp ".\app\target\dependency\*" webapp.runner.launch.Main --port 8080 .\app\target\*.war --enable-naming
 LINUX: java -cp "./app/target/dependency/*" webapp.runner.launch.Main --port 8080 ./app/target/*.war --enable-naming
 HEROKU: java $JAVA_OPTS -cp "./app/target/dependency/*" webapp.runner.launch.Main --port $PORT ./app/target/*.war --enable-naming
+TRAVIS:
+    language: java
+    jdk: oraclejdk11
+    install: cp settings.xml $HOME/.m2/settings.xml
+    script: mvn -e verify
