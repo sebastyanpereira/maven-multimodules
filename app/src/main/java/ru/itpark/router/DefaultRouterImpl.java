@@ -1,11 +1,13 @@
 package ru.itpark.router;
 
 
+import lombok.val;
 import repository.UserRepositoryImpl;
 import ru.itpark.controller.UserController;
 import ru.itpark.exception.InitializationException;
 import ru.itpark.exception.NotFoundException;
 import service.UserServiceImpl;
+
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.servlet.ServletException;
@@ -45,9 +47,8 @@ public class DefaultRouterImpl implements Router {
                         userController.doPost(request, response);
                         break;
                 }
-            }
-            else {
-                throw new NotFoundException();
+            } else if (url.startsWith("/search")) {
+                userController.getSearch(request, response);
             }
         } catch (Exception e) {
             try {

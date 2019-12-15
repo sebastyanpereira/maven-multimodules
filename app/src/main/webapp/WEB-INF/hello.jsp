@@ -17,7 +17,12 @@
         <div class="col">
             <h2>Users</h2>
 
-            <table class="table">
+            <form class="mt-3" action="<%= request.getContextPath() %>/search">
+                <input name="q" class="form-control" type="search" placeholder="Search">
+                <button type="submit" class="btn btn-primary mt-3">Search</button>
+            </form>
+            <br/>
+            <table class="table table-dark">
                 <thead>
                 <tr>
                     <th scope="col">id</th>

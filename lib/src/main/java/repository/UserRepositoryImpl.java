@@ -18,9 +18,12 @@ public class UserRepositoryImpl implements Repository<User> {
     }
 
     @Override
-    public List<User> getAll() throws SQLException {
-        String sql = "SELECT id, name, surname FROM user";
-        return JdbcTemplate.executeQuery(ds, sql, rs ->
+    public List<User> getAll(String search) throws SQLException {
+        String sql = "SELECT id, name, surname FROM user WHERE name LIKE ?";
+        return JdbcTemplate.executeQuery(ds, sql, stmt -> {
+                    stmt.setString(1, "%" + search + "%");
+                    return stmt;
+                }, rs ->
                 new User(
                         rs.getString("id"),
                         rs.getString("name"),
